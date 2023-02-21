@@ -1,5 +1,8 @@
-# Created by https://www.toptal.com/developers/gitignore/api/windows,node,react,git,firebase
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,node,react,git,firebase
+# Created by https://www.toptal.com/developers/gitignore/api/firebase,windows,react,node,dotenv
+# Edit at https://www.toptal.com/developers/gitignore?templates=firebase,windows,react,node,dotenv
+
+### dotenv ###
+.env
 
 ### Firebase ###
 .idea
@@ -9,21 +12,6 @@
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
-
-### Git ###
-# Created by git for backups. To disable backups in Git:
-# $ git config --global mergetool.keepBackup false
-*.orig
-
-# Created by git when using merge tools for conflicts
-*.BACKUP.*
-*.BASE.*
-*.LOCAL.*
-*.REMOTE.*
-*_BACKUP_*.txt
-*_BASE_*.txt
-*_LOCAL_*.txt
-*_REMOTE_*.txt
 
 ### Node ###
 # Logs
@@ -101,7 +89,6 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-.env
 .env.development.local
 .env.test.local
 .env.production.local
@@ -204,4 +191,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,node,react,git,firebase
+# End of https://www.toptal.com/developers/gitignore/api/firebase,windows,react,node,dotenv
