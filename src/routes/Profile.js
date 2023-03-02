@@ -1,15 +1,15 @@
 import { authService, dbService } from "fbase";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 const Profile = ({ userObj, refreshUser }) => {
   const [newDisplayName, setNewDisplayName] = useState(userObj.displayName);
 
   // Redirect 방식 말고 useHistory를 사용할 수도 있다.
-  // const history = useHistory()
+  const history = useHistory();
   const onLogOutClick = () => {
     authService.signOut();
-    // history.push("/")
+    history.push("/");
   };
 
   const onChange = (event) => {
@@ -34,21 +34,34 @@ const Profile = ({ userObj, refreshUser }) => {
       .where("creatorId", "==", userObj.uid)
       .orderBy("createdAt")
       .get();
-    console.log(nweets.docs.map((doc) => doc.data()));
-    // =>은 return이다??!
   };
+
   useEffect(() => {
     getMyNweets();
   }, []);
 
   return (
-    <>
-      <form onSubmit={onSubmit}>
-        <input type="text" placeholder="Display name" onChange={onChange} />
-        <input type="submit" value="update profile" />
+    <div className="container">
+      <form onSubmit={onSubmit} className="profileForm">
+        <input
+          type="text"
+          placeholder="Display name"
+          onChange={onChange}
+          autoFocus
+          className="formInput"
+          value={newDisplayName}
+        />
+        <input
+          type="submit"
+          value="update profile"
+          className="formBtn"
+          style={{ marginTop: 10 }}
+        />
       </form>
-      <button onClick={onLogOutClick}>Log-out</button>
-    </>
+      <span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
+        Log-out
+      </span>
+    </div>
   );
 };
 

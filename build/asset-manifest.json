@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/nomard-react-twitter/static/css/main.8296a6ab.chunk.css",
+    "main.js": "/nomard-react-twitter/static/js/main.b9f519d4.chunk.js",
+    "main.js.map": "/nomard-react-twitter/static/js/main.b9f519d4.chunk.js.map",
+    "runtime-main.js": "/nomard-react-twitter/static/js/runtime-main.963b0f64.js",
+    "runtime-main.js.map": "/nomard-react-twitter/static/js/runtime-main.963b0f64.js.map",
+    "static/js/2.c0716dd2.chunk.js": "/nomard-react-twitter/static/js/2.c0716dd2.chunk.js",
+    "static/js/2.c0716dd2.chunk.js.map": "/nomard-react-twitter/static/js/2.c0716dd2.chunk.js.map",
+    "index.html": "/nomard-react-twitter/index.html",
+    "precache-manifest.e46cc56188250773e23f91cc43dc72ac.js": "/nomard-react-twitter/precache-manifest.e46cc56188250773e23f91cc43dc72ac.js",
+    "service-worker.js": "/nomard-react-twitter/service-worker.js",
+    "static/css/main.8296a6ab.chunk.css.map": "/nomard-react-twitter/static/css/main.8296a6ab.chunk.css.map",
+    "static/js/2.c0716dd2.chunk.js.LICENSE.txt": "/nomard-react-twitter/static/js/2.c0716dd2.chunk.js.LICENSE.txt",
+    "static/js/main.b9f519d4.chunk.js.LICENSE.txt": "/nomard-react-twitter/static/js/main.b9f519d4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.963b0f64.js",
+    "static/js/2.c0716dd2.chunk.js",
+    "static/css/main.8296a6ab.chunk.css",
+    "static/js/main.b9f519d4.chunk.js"
+  ]
+}

@@ -1,5 +1,7 @@
 import { dbService, storageService } from "fbase";
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Nweet = ({ nweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
@@ -26,35 +28,36 @@ const Nweet = ({ nweetObj, isOwner }) => {
   };
 
   return (
-    <div key={nweetObj.id}>
+    <div key={nweetObj.id} className="nweet">
       {editing ? (
         <>
-          {isOwner ?? (
-            <>
-              <form onSubmit={onSubmit}>
-                <input
-                  type="text"
-                  value={newNweet}
-                  required
-                  onChange={onChange}
-                />{" "}
-                <input type="submit" value="✅" />
-              </form>
-              <button onClick={toggleEditing}>❌</button>
-            </>
-          )}
+          <form onSubmit={onSubmit} className="container nweetEdit">
+            <input
+              type="text"
+              value={newNweet}
+              required
+              onChange={onChange}
+              autoFocus
+            />{" "}
+            <input type="submit" value="✅" className="formBtn" />
+          </form>
+          <span onClick={toggleEditing} className="formBtn cancelBtn">
+            ❌
+          </span>
         </>
       ) : (
         <>
           <h4>{nweetObj.text}</h4>
-          {nweetObj.attachmentUrl && (
-            <img src={nweetObj.attachmentUrl} width="50px" />
-          )}
+          {nweetObj.attachmentUrl && <img src={nweetObj.attachmentUrl} />}
           {isOwner && (
-            <>
-              <button onClick={onDeleteClick}>❌</button>
-              <button onClick={toggleEditing}>✏</button>
-            </>
+            <div className="nweet__actions">
+              <span onClick={onDeleteClick}>
+                <FontAwesomeIcon icon={faTrash} />
+              </span>
+              <span onClick={toggleEditing}>
+                <FontAwesomeIcon icon={faPencilAlt} />
+              </span>
+            </div>
           )}
         </>
       )}
